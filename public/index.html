@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="search-form">
+        <input
+          type="text"
+          class="city-input"
+          placeholder="Enter a city"
+          name="location"
+        />
+        <button type="button" class="btn search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <h3 class="error">Error, city not found</h3>
+      <h3 class="or show">or</h3>
+      <button class="get-loc show">Get Device location</button>
+      <div class="weather-data loading">
+        <div class="city-grp">
+          <i class="fas fa-map-marker-alt"></i>
+          <p id="city">Hyderabad</p>
+        </div>
+        <div class="date">Fri 3 Dec 1:14 pm</div>
+        <div class="curr-temp-grp">
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="weather-icon"
+            class="weath-icon"
+          />
+          <div class="curr-temp">35&#176;C</div>
+        </div>
+        <div class="feel-temp">Feels like 38&#176;</div>
+        <div class="curr-weather">Cloudy</div>
+        <div class="hum-wind">
+          <div class="humidity">Humidity <br />81<span>%</span></div>
+          <div class="wind">
+            Wind Speed<br />4.1
+            <span>m/sec</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
