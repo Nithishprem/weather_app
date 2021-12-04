@@ -5,7 +5,6 @@ const errorDOM = document.querySelector('.error')
 
 const getweather = async (city)=>{
     try{
-        console.log(city)
         const res = await fetch('/weather', {
             method: 'POST',
             headers: {
@@ -14,7 +13,7 @@ const getweather = async (city)=>{
             },
             body : JSON.stringify({ city })
         })
-        console.log(res)
+
         if(!res.ok){
                    throw new Error("reource not found")
                 }
